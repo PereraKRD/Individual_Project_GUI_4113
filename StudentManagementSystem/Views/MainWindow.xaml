@@ -1,0 +1,330 @@
+﻿<Window x:Class="StudentManagementSystem.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentManagementSystem.Views"
+        xmlns:localVM="clr-namespace:StudentManagementSystem.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Width="780"
+        Height="700"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Window.DataContext>
+        <localVM:MainWindowVM/>
+    </Window.DataContext>
+    <Border
+            BorderBrush="White"
+            BorderThickness="2"
+            CornerRadius="50">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="19*" />
+                <ColumnDefinition Width="31*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border CornerRadius="50 0 0 50">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0 1" EndPoint="1 0">
+                        <GradientStop Offset="4" Color="#004e92" />
+                        <GradientStop Offset="0" Color="#000428" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border CornerRadius="50">
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Images/background2.jpeg" Opacity=".1" />
+                    </Border.Background>
+                    <Grid>
+                        <Canvas>
+                            <Polygon
+                            Canvas.Top="107"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Fill="#19547b"
+                            Opacity=".8"
+                            Points="0 20 230 140 0 270">
+                                <Polygon.Effect>
+                                    <DropShadowEffect
+                                    BlurRadius="4"
+                                    Direction="320"
+                                    ShadowDepth="2"
+                                    Color="#3f3f3f" />
+                                </Polygon.Effect>
+                            </Polygon>
+                            <Polygon
+                            Canvas.Top="377"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Fill="#19547b"
+                            Opacity=".8"
+                            Points="0 20 230 140 0 270">
+                                <Polygon.Effect>
+                                    <DropShadowEffect
+                                    BlurRadius="4"
+                                    Direction="320"
+                                    ShadowDepth="2"
+                                    Color="#3f3f3f" />
+                                </Polygon.Effect>
+                            </Polygon>
+                            <TextBlock
+                            Canvas.Top="186"
+                            Width="253"
+                            Height="133"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            FontFamily="Verdana"
+                            FontSize="15"
+                            FontWeight="Black"
+                            Foreground="Beige"
+                            TextWrapping="Wrap" Canvas.Left="6"><Run Text="Hello !!! " /><LineBreak /><Run Text="Are you an already registered user ???   " /><LineBreak /><Run Text="                            &#xA;Then you can move to right side grid to edit or delete your data.&#xA;&#xA;" /></TextBlock>
+
+                            <TextBlock
+                            Canvas.Top="484"
+                            Width="236"
+                            Height="81"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            FontFamily="Verdana"
+                            FontSize="15"
+                            FontWeight="Black"
+                            Foreground="Beige"
+                            TextWrapping="Wrap" Canvas.Left="6"><Run Text="New to here ???" /><LineBreak /><Run Text="&#xA;Press above button to get registered to the system." /></TextBlock>
+                        </Canvas>
+
+                        <Button
+                        Margin="60,350,59,281"
+                        Padding="10"
+                        Command="{Binding AddPersonCommand}"
+                        RenderTransformOrigin="0.419,1.528"
+                        Style="{StaticResource AddButton}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image
+                                Width="44"
+                                Height="34"
+                                RenderTransformOrigin="0.518,0.625"
+                                Source="/Images/add-user.png" />
+                                <TextBlock
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="#fff"
+                                Text="ADD" />
+                            </StackPanel>
+                        </Button>
+                        <TextBlock
+                        Margin="0,12,0,561"
+                        HorizontalAlignment="Center"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        Foreground="white"
+                        TextWrapping="Wrap">
+                        <Run Text="       STUDENT" />
+                        <LineBreak />
+                        <Run Text="  MANAGEMENT " />
+                        <LineBreak />
+                        <Run Text="        SYSTEM" />
+                            <TextBlock.Effect>
+                                <DropShadowEffect
+                                BlurRadius="3"
+                                ShadowDepth="6"
+                                Color="DimGray" />
+                            </TextBlock.Effect>
+                        </TextBlock>
+                    </Grid>
+                </Border>
+            </Border>
+            <Border
+            CornerRadius="0 50 50 0" Grid.Column="1">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0" Color="#3C3B6E" />
+                        <GradientStop Offset="1" Color="#734b6d" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border CornerRadius="50">
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Images/background2.jpeg" Opacity=".1" />
+                    </Border.Background>
+                    <StackPanel Width="482" HorizontalAlignment="Left">
+                        <TextBlock
+                        Margin="0,0,0,10"
+                        HorizontalAlignment="Center"
+                        FontSize="30"
+                        FontWeight="ExtraBold"
+                        Foreground="PeachPuff"
+                        Text="S T U D E N T   L I S T">
+                            <TextBlock.Effect>
+                                <DropShadowEffect
+                                BlurRadius="3"
+                                ShadowDepth="6"
+                                Color="DimGray" />
+                            </TextBlock.Effect>
+                        </TextBlock>
+
+                        <Separator Margin="1" Background="AliceBlue" />
+                        <StackPanel
+                        Height="500"
+                        VerticalAlignment="Top"
+                        Background="Transparent"
+                        Orientation="Vertical">
+                            <StackPanel
+                            Width="458"
+                            Margin="12,0,0,0"
+                            HorizontalAlignment="Left"
+                            Background="#2B2D42"
+                            Orientation="Horizontal">
+
+                                <TextBlock
+                                Width="55"
+                                Margin="40,10,10,10"
+                                Foreground="AntiqueWhite"
+                                Style="{StaticResource ListView}"
+                                Text="First Name"
+                                TextWrapping="Wrap">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect
+                                        BlurRadius="3"
+                                        ShadowDepth="3"
+                                        Color="DimGray" />
+                                    </TextBlock.Effect>
+                                </TextBlock>
+                                <TextBlock
+                                Width="52"
+                                Height="33"
+                                Margin="20,0,0,0"
+                                Foreground="AntiqueWhite"
+                                Style="{StaticResource ListView}"
+                                Text="Last Name"
+                                TextWrapping="Wrap">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect
+                                        BlurRadius="3"
+                                        ShadowDepth="3"
+                                        Color="DimGray" />
+                                    </TextBlock.Effect>
+                                </TextBlock>
+                                <TextBlock
+                                Margin="20,0,0,0"
+                                Foreground="AntiqueWhite"
+                                Style="{StaticResource ListView}"
+                                Text="DateOfBirth">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect
+                                        BlurRadius="3"
+                                        ShadowDepth="3"
+                                        Color="DimGray" />
+                                    </TextBlock.Effect>
+                                </TextBlock>
+                                <TextBlock
+                                Margin="35,0,0,0"
+                                Foreground="AntiqueWhite"
+                                Style="{StaticResource ListViewGPA}"
+                                Text="GPA">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect
+                                        BlurRadius="3"
+                                        ShadowDepth="3"
+                                        Color="DimGray" />
+                                    </TextBlock.Effect>
+                                </TextBlock>
+                                <TextBlock
+                                Margin="25,0,0,0"
+                                Foreground="AntiqueWhite"
+                                Style="{StaticResource ListView}"
+                                Text="Operations">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect
+                                        BlurRadius="3"
+                                        ShadowDepth="3"
+                                        Color="DimGray" />
+                                    </TextBlock.Effect>
+                                </TextBlock>
+
+                            </StackPanel>
+                            <ListView
+                            x:Name="Listview"
+                            Height="428"
+                            Margin="0,20,0,0"
+                            AlternationCount="2"
+                            Background="Transparent"
+                            ItemsSource="{Binding People}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border
+                                        Width="460"
+                                        Height="35"
+                                        Padding="0.1"
+                                        Background="AntiqueWhite"
+                                        BorderBrush="Black"
+                                        BorderThickness="1"
+                                        CornerRadius="5">
+                                            <StackPanel
+                                            Width="460"
+                                            Background="Transparent"
+                                            Orientation="Horizontal">
+                                                <Image
+                                                Width="30"
+                                                Height="30"
+                                                Source="{Binding Image}" />
+                                                <TextBlock Style="{StaticResource ListView}" Text="{Binding FirstName}" />
+                                                <TextBlock
+                                                Width="52"
+                                                Height="18"
+                                                Style="{StaticResource ListView}"
+                                                Text="{Binding LastName}" />
+                                                <TextBlock
+                                                Width="88"
+                                                Height="13"
+                                                Style="{StaticResource ListView}"
+                                                Text="{Binding DateOfBirth, StringFormat=dd/MM/yyyy}" />
+                                                <TextBlock Style="{StaticResource ListViewGPA}" Text="{Binding GPA}" />
+                                                <Button
+                                                Margin="10,0,10,0"
+                                                Command="{Binding DataContext.EditPersonCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                                CommandParameter="{Binding}"
+                                                Cursor="Hand"
+                                                Style="{StaticResource EditButton}">
+                                                    <Image
+                                                    Width="20"
+                                                    Height="20"
+                                                    Source="/Images/pencil.png" />
+                                                </Button>
+                                                <Button
+                                                Command="{Binding DataContext.DeletePersonCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                                CommandParameter="{Binding}"
+                                                Cursor="Hand"
+                                                Style="{StaticResource DeleteButton}">
+                                                    <Image
+                                                    Width="20"
+                                                    Height="20"
+                                                    Source="/Images/delete.png" />
+                                                </Button>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Border>
+            <Button
+            Margin="434,14,16,654"
+            Background="Transparent"
+            Command="{Binding CloseWindowCommand}"
+            CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+            Cursor="Hand" Grid.Column="1">
+                <Image
+                Width="27"
+                Height="23"
+                Source="/Images/remove.png" />
+            </Button>
+        </Grid>
+    </Border>
+</Window>

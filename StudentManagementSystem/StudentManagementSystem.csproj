@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\1.png" />
+    <None Remove="Images\2.png" />
+    <None Remove="Images\3.png" />
+    <None Remove="Images\add-user.png" />
+    <None Remove="Images\back21.jpeg" />
+    <None Remove="Images\background.jpeg" />
+    <None Remove="Images\Background2.jpeg" />
+    <None Remove="Images\cancel.png" />
+    <None Remove="Images\delete.png" />
+    <None Remove="Images\diskette.png" />
+    <None Remove="Images\editing.png" />
+    <None Remove="Images\pencil.png" />
+    <None Remove="Images\remove.png" />
+    <None Remove="Images\student.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\1.png" />
+    <Resource Include="Images\2.png" />
+    <Resource Include="Images\3.png" />
+    <Resource Include="Images\add-user.png" />
+    <Resource Include="Images\back21.jpeg" />
+    <Resource Include="Images\background.jpeg" />
+    <Resource Include="Images\Background2.jpeg" />
+    <Resource Include="Images\cancel.png" />
+    <Resource Include="Images\delete.png" />
+    <Resource Include="Images\diskette.png" />
+    <Resource Include="Images\editing.png" />
+    <Resource Include="Images\pencil.png" />
+    <Resource Include="Images\remove.png" />
+    <Resource Include="Images\student.png" />
+  </ItemGroup>
+
+</Project>

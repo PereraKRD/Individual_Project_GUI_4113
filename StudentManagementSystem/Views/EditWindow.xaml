@@ -1,0 +1,303 @@
+﻿<Window x:Class="StudentManagementSystem.Views.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentManagementSystem.Views"
+        mc:Ignorable="d"
+        Title="EditWindow"
+        Width="660"
+        Height="471"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid>
+        <Grid Margin="10,0,0,0">
+            <Border
+                BorderBrush="White"
+                BorderThickness="4"
+                CornerRadius="50">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0 0" EndPoint="1 1">
+                        <GradientStop Offset=".7" Color=" #2c3e50" />
+                        <GradientStop Offset="0" Color="#bdc3c7" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Effect>
+                    <DropShadowEffect
+                        BlurRadius="10"
+                        Direction="135"
+                        Opacity="1"
+                        ShadowDepth="10"
+                        Color="#888" />
+                </Border.Effect>
+                <Border CornerRadius="60" Opacity=".8">
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Images/student.png" Stretch="Fill" />
+                    </Border.Background>
+                    <StackPanel Margin="0,0,0,10" Orientation="Vertical">
+
+                        <TextBlock
+                            Width="210"
+                            Height="47"
+                            Margin="10,20"
+                            HorizontalAlignment="Center"
+                            FontSize="20"
+                            FontWeight="Black"
+                            Foreground="Black"
+                            Text="E D I T   S T U D E N T " />
+
+
+                        <StackPanel
+                            Width="767"
+                            Height="41"
+                            Margin="10,0,10,10"
+                            Orientation="Horizontal">
+                            <TextBlock
+                                Width="118"
+                                Height="26"
+                                FontSize="15"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text="New First Name" />
+                            <TextBlock
+                                Width="8"
+                                Height="36"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text=":" />
+                            <Border
+                                Width="302"
+                                Margin="20,0,40,0"
+                                BorderBrush="Black"
+                                Opacity=".9">
+                                <TextBox
+                                    x:Name="txtfname"
+                                    Margin="2,0,-174,0"
+                                    HorizontalContentAlignment="Left"
+                                    VerticalContentAlignment="Center"
+                                    Background="Beige"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    Foreground="DimGray"
+                                    Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
+                            </Border>
+
+                        </StackPanel>
+
+                        <StackPanel
+                            Width="767"
+                            Height="41"
+                            Margin="10,0,10,10"
+                            Orientation="Horizontal">
+                            <TextBlock
+                                Width="120"
+                                Height="26"
+                                FontSize="15"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text="New Last Name" />
+                            <TextBlock
+                                Width="8"
+                                Height="36"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text=":" />
+                            <Border
+                                Width="619"
+                                Margin="20,0,40,0"
+                                BorderBrush="Black"
+                                Opacity=".9">
+                                <TextBox
+                                    x:Name="txtlname"
+                                    Margin="0,0,145,0"
+                                    HorizontalContentAlignment="Left"
+                                    VerticalContentAlignment="Center"
+                                    Background="Beige"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    Foreground="DimGray"
+                                    Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel
+                            Width="767"
+                            Height="41"
+                            Margin="10,0,10,10"
+                            Orientation="Horizontal">
+
+                            <TextBlock
+                                Width="120"
+                                Height="26"
+                                FontSize="15"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text="New Image" />
+
+                            <TextBlock
+                                Width="8"
+                                Height="36"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text=":" />
+
+                            <Grid Width="475" Margin="20,0,40,0">
+                                <Border BorderBrush="Black" Opacity=".9">
+                                    <TextBox
+                                        x:Name="txtImage"
+                                        HorizontalContentAlignment="Left"
+                                        VerticalContentAlignment="Center"
+                                        Background="Beige"
+                                        FontSize="20"
+                                        FontWeight="Bold"
+                                        Foreground="DimGray"
+                                        Text="{Binding ImagePath, UpdateSourceTrigger=PropertyChanged}" />
+                                </Border>
+                                <Button
+                                    Height="41"
+                                    Margin="375,0,1,0"
+                                    VerticalAlignment="Center"
+                                    Background="DimGray"
+                                    Command="{Binding BrowseCommand}"
+                                    Content="Browse..." />
+                            </Grid>
+
+                        </StackPanel>
+
+
+                        <StackPanel
+                            Width="767"
+                            Height="41"
+                            Margin="10,0,10,10"
+                            Orientation="Horizontal">
+                            <TextBlock
+                                Width="117"
+                                Height="39"
+                                FontSize="15"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text="New DOB (select a date) "
+                                TextWrapping="Wrap" />
+                            <TextBlock
+                                Width="8"
+                                Height="36"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text=":" />
+                            <Border
+                                Width="619"
+                                Margin="20,0,40,0"
+                                BorderBrush="Black"
+                                Opacity=".9">
+                                <DatePicker
+                                    x:Name="txtd"
+                                    Margin="0,0,342,0"
+                                    VerticalContentAlignment="Center"
+                                    Background="Beige"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    Foreground="DimGray"
+                                    SelectedDate="{Binding DateOfBirth, UpdateSourceTrigger=PropertyChanged}" />
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel
+                            Width="767"
+                            Height="41"
+                            Margin="10,0,10,10"
+                            Orientation="Horizontal">
+                            <TextBlock
+                                Width="120"
+                                Height="26"
+                                FontSize="15"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text="New GPA (0-4)" />
+                            <TextBlock
+                                Width="8"
+                                Height="36"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text=":" />
+                            <Border
+                                Width="303"
+                                Margin="20,0,40,0"
+                                BorderBrush="Black"
+                                Opacity=".9">
+                                <TextBox
+                                    x:Name="txtgpa"
+                                    Margin="0,0,-185,0"
+                                    HorizontalContentAlignment="Left"
+                                    VerticalContentAlignment="Center"
+                                    Background="Beige"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    Foreground="DimGray"
+                                    Text="{Binding GPA, UpdateSourceTrigger=PropertyChanged}" />
+                            </Border>
+                        </StackPanel>
+
+                    </StackPanel>
+                </Border>
+            </Border>
+            <Button
+                Margin="345,403,179,22"
+                Command="{Binding EditCommand}"
+                Cursor="Hand"
+                Style="{StaticResource save_Button}">
+                <Button.Effect>
+                    <DropShadowEffect
+                        BlurRadius="10"
+                        Opacity="1"
+                        ShadowDepth="5"
+                        Color="Black" />
+                </Button.Effect>
+                <StackPanel Orientation="Horizontal">
+                    <Image
+                        Width="30"
+                        Height="27"
+                        Source="/Images/editing.png" />
+                    <TextBlock
+                        Width="49"
+                        Margin="10,0,0,0"
+                        FontSize="18"
+                        Foreground="Black"
+                        Text="Edit" />
+                </StackPanel>
+            </Button>
+
+            <Button
+                Margin="492,403,30,22"
+                Command="{Binding CancelCommand}"
+                Cursor="Hand"
+                Style="{StaticResource save_Button}">
+                <Button.Effect>
+                    <DropShadowEffect
+                        BlurRadius="10"
+                        Opacity="1"
+                        ShadowDepth="5"
+                        Color="Black" />
+                </Button.Effect>
+                <StackPanel Orientation="Horizontal">
+                    <Image
+                        Width="30"
+                        Height="27"
+                        Source="/Images/cancel.png" />
+                    <TextBlock
+                        Width="55"
+                        Margin="10,0,0,0"
+                        FontSize="18"
+                        Foreground="Black"
+                        Text="Cancel" />
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

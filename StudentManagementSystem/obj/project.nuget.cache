@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VV7V3EFGQWE+h3AzvBbjBMZTbCbcPFvocDssOgGgDmIXipNFWPjiq3APArM+pIcj3OTJkQ5KGjlOVWf/yPgCyw==",
+  "success": true,
+  "projectFilePath": "D:\\UOR\\ACEDEMIC\\SEM 03\\projects\\UI INDIVIDUAL\\final\\Final_Submit\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ryan Dilanka\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
